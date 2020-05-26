@@ -1,5 +1,4 @@
-[![CircleCI](https://circleci.com/gh/varadharajaan/airline.svg?style=svg)]
-(https://circleci.com/gh/varadharajaan/airline)
+[![CircleCI](https://circleci.com/gh/varadharajaan/airline.svg?style=svg)](https://circleci.com/gh/varadharajaan/airline)
 
 STEPS TO RUN THE APPLICATION:
 
