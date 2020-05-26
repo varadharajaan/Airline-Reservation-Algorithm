@@ -77,13 +77,13 @@ public class AirlineUtils {
     private  String printValues(List<List<String[]>> seats, int colSize, int rowSize)  {
 
         StringBuilder output = new StringBuilder();
-        for(var i=0;i<colSize;i++){
-            for(var j=0;j<rowSize;j++){
+        for(int i=0;i<colSize;i++){
+            for(int j=0;j<rowSize;j++){
                 if(j>= seats.size() || i>= seats.get(j).size()|| seats.get(j) ==null|| seats.get(j).get(i) ==null){
                     output.append("           ");
                     continue;
                 }
-                for( var k=0; k< seats.get(j).get(i).length; k++){
+                for( int k=0; k< seats.get(j).get(i).length; k++){
                     boolean isNumeric = seats.get(j).get(i)[k].chars().allMatch( Character::isDigit);
                     if(seats.get(j).get(i)[k].equals("xx") || (isNumeric && Integer.parseInt(seats.get(j).get(i)[k]) >=10) )
                         output.append(seats.get(j).get(i)[k]).append(" ");
@@ -113,11 +113,11 @@ public class AirlineUtils {
 
         try {
 
-            for(var i=0;i<colSize;i++){
-                for(var j=0;j<rowSize;j++){
+            for(int i=0;i<colSize;i++){
+                for(int j=0;j<rowSize;j++){
                     if(j>=seats.size()|| i>=seats.get(j).size() ||  seats.get(j) ==null|| seats.get(j).get(i) ==null)
                         continue;
-                    for(var k=0; k< seats.get(j).get(i).length; k++){
+                    for(int k=0; k< seats.get(j).get(i).length; k++){
                         if(seats.get(j) !=null&& seats.get(j).get(i) !=null && seats.get(j).get(i)[k].equals(val)){
                             if(counter>passengersCount)
                                 seats.get(j).get(i)[k]="xx";
