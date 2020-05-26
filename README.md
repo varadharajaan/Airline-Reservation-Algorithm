@@ -2,10 +2,10 @@
 
 STEPS TO RUN THE APPLICATION:
 
-1). exceute command -> ./gradlew clean build
-2). you can verify the output is print in the file output.txt
-3). can give custom input from test case file
-4). Also can verify using /swagger-ui.html
+1). exceute command -> ./gradlew clean build \\
+2). you can verify the output is print in the file output.txt \\
+3). can give custom input from test case file \\
+4). Also can verify using /swagger-ui.html \\
 
 REQUEST :
  {
