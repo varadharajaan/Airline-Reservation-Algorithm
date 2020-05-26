@@ -1,5 +1,7 @@
-package com.airline.arrangment;
+package com.airline.arrangment.controller;
 
+import com.airline.arrangment.service.AirlineService;
+import com.airline.arrangment.model.RequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,16 +14,16 @@ import javax.validation.Valid;
 public class AirlineController {
 
 
-	AirlineUtils airlineUtils;
+	AirlineService airlineService;
 
 	@Autowired
-	public void setAirlineUtils(AirlineUtils airlineUtils) {
-		this.airlineUtils = airlineUtils;
+	public void setAirlineService(AirlineService airlineService) {
+		this.airlineService = airlineService;
 	}
 
 	@PostMapping("/airline-arrangement")
 	public ResponseEntity<String> firstPage(@Valid  @RequestBody RequestDTO input) {
-		return new ResponseEntity<>(airlineUtils.allocateSeats(input.getSeat(),input.getPassenger()), HttpStatus.CREATED);
+		return new ResponseEntity<>(airlineService.allocateSeats(input.getSeat(),input.getPassenger()), HttpStatus.CREATED);
 	}
 
 }

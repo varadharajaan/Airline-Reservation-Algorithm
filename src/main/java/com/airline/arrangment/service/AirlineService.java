@@ -1,5 +1,6 @@
-package com.airline.arrangment;
+package com.airline.arrangment.service;
 
+import com.airline.arrangment.model.Seats;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -11,7 +12,7 @@ import java.util.stream.IntStream;
  * @Projectname Airline_Arrangement
  */
 @Service
-public class AirlineUtils {
+public class AirlineService {
 
     public int[][] replaceString(String str) {
         try {

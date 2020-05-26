@@ -1,4 +1,4 @@
-package com.airline.arrangment;
+package com.airline.arrangment.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,8 +22,6 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .apis(RequestHandlerSelectors.basePackage("com.airline.arrangment"))
                 .paths(PathSelectors.any())
                 .build();
-
-
     }
 
     @Override

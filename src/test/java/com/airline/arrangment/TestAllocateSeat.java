@@ -1,6 +1,7 @@
 package com.airline.arrangment;
 
 
+import com.airline.arrangment.service.AirlineService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,11 +15,11 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestAllocateSeat {
 
-    AirlineUtils airlineUtils;
+    AirlineService airlineService;
 
     @Before
     public  void setup() {
-        airlineUtils = new AirlineUtils();
+        airlineService = new AirlineService();
     }
 
     @Test
@@ -26,7 +27,7 @@ public class TestAllocateSeat {
 
         String seats = "[[3,2],[4,3],[2,3],[3,4]]";
         int passengersCount = 30;
-        airlineUtils.allocateSeats(seats,passengersCount);
+        airlineService.allocateSeats(seats,passengersCount);
 
     }
 
@@ -35,7 +36,7 @@ public class TestAllocateSeat {
 
         String seats = "[[s,2],[4,3],[2,3],[3,4]]";
         int passengersCount = 30;
-        airlineUtils.allocateSeats(seats,passengersCount);
+        airlineService.allocateSeats(seats,passengersCount);
 
     }
 

@@ -1,4 +1,4 @@
-package com.airline.arrangment;
+package com.airline.arrangment.model;
 
 import java.util.List;
 import java.util.Objects;
